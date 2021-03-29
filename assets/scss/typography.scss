@@ -1,0 +1,200 @@
+@import 'colors';
+@import 'fonts';
+@import 'globals';
+
+body {
+  font-size: rem(20px);
+
+  @include forMobile() {
+    font-size: rem(18px);
+  }
+}
+
+h1, h2, h3, h4, h5, .subtitle-1, .subtitle-2 {
+  font-family: $fontSecondary;
+  font-weight: bold;
+  color: $black;
+  display: block;
+}
+
+h1 {
+  font-size: rem(72px);
+  line-height: rem(72px);
+
+  @include forMobile() {
+    font-size: rem(42px);
+    line-height: rem(42px);
+  }
+}
+
+h2 {
+  font-size: rem(50px);
+  line-height: rem(56px);
+
+  @include forMobile() {
+    font-size: rem(32px);
+    line-height: rem(36px);
+  }
+}
+
+h3 {
+  font-size: rem(42px);
+  line-height: rem(48px);
+
+  @include forMobile() {
+    font-size: rem(28px);
+    line-height: rem(32px);
+  }
+}
+
+h4 {
+  font-size: rem(24px);
+  line-height: rem(32px);
+
+  @include forMobile() {
+    font-size: rem(20px);
+    line-height: rem(28px);
+  }
+}
+
+h5 {
+  font-size: rem(20px);
+  line-height: rem(28px);
+
+  @include forMobile() {
+    font-size: rem(20px);
+    line-height: rem(24px);
+  }
+}
+
+.subtitle-1 {
+  text-transform: uppercase;
+  font-size: rem(16px);
+  line-height: rem(20px);
+  letter-spacing: 2px;
+
+  @include forMobile() {
+    font-size: rem(12px);
+    line-height: rem(16px);
+  }
+}
+
+.subtitle-2 {
+  text-transform: uppercase;
+  font-size: rem(12px);
+  line-height: rem(16px);
+  letter-spacing: 1px;
+
+  @include forMobile() {
+    font-size: rem(10px);
+    line-height: rem(12px);
+    letter-spacing: 0.8px;
+  }
+}
+
+a {
+  font-weight: bold;
+  color: $primary-color;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+
+  &.link {
+    &::after {
+      content: "";
+      height: 2px;
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+    }
+  }
+
+  &.large {
+    font-size: rem(24px);
+    line-height: rem(28px);
+
+    &:hover, &:active {
+      &::after {
+        bottom: -3px;
+      }
+    }
+  }
+
+  &:hover, &:active {
+    color: $primary-color;
+    text-decoration: none;
+
+    &:hover, &:active {
+      &::after {
+        width: 100%;
+        background-color: $primary-color;
+      }
+    }
+  }
+
+  &.forward {
+    .far {
+      margin-left: $spacing1;
+    }
+
+    &:hover, &:active {
+
+      &:hover, &:active {
+        &::after {
+          width: 83%;
+          background-color: $primary-color;
+        }
+      }
+
+      .far::before {
+        content: '\f061';
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+p {
+  font-size: rem(20px);
+  line-height: rem(32px);
+  color: $black;
+  font-weight: 400;
+
+  @include forMobile() {
+    font-size: rem(18px);
+    line-height: rem(28px);
+  }
+  
+  a {
+    font-weight: normal;
+
+    &::after {
+      background-color: $primary-color;
+      width: 100%;
+    }
+  }
+
+  &.lead-text {
+    font-size: rem(24px);
+    line-height: rem(44px);
+    font-weight: 300;
+
+    @include forMobile() {
+      font-size: rem(20px);
+      line-height: rem(36px);
+    }
+  }
+}
+
+blockquote {
+  font-family: $fontSecondary;
+  font-weight: 100;
+  font-size: rem(90px);
+  line-height: rem(90px);
+  word-break: break-word;
+
+  @include forMobile() {
+    font-size: rem(60px);
+    line-height: rem(60px);
+  }
+}

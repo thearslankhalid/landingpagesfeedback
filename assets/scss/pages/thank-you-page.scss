@@ -1,0 +1,126 @@
+.thankyou-page {
+  .logo-text {
+    width: max-content;
+    margin: 0 auto;
+    padding-top: $spacing3;
+  }
+
+  .header-container {
+    background-color: $primary-color;
+    height: inherit;
+  }
+
+  header {
+    grid-column: 1/ -1;
+    padding: $spacing12 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    @include forIpadPro() {
+      padding: $spacing8*2 0;
+      grid-column: 2/ span 10;
+    }
+
+    @include forMobile() {
+      padding: $spacing6*2 0;
+      grid-column: 1/-1;
+    }
+
+    h1 {
+      color: $off-white;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: rem(150px);
+      position: relative;
+      width: max-content;
+      margin-bottom: $spacing6;
+      z-index: 2;
+
+      @media (max-width:1050px) {
+        font-size: rem(120px);
+        line-height: rem(120px);
+        width: auto;
+      }
+
+      @include forMobile() {
+        font-size: rem(80px);
+        line-height: rem(90px);
+      }
+
+      &::before {
+        position: absolute;
+        left: -5px;
+        bottom: -5px;
+        content: "THANK YOU";
+        font-size: rem(150px);
+        color: $secondary-color;
+        z-index: -1;
+
+        @media (max-width: 1050px) {
+          content: '';
+        }
+      }
+
+      @include forMobile() {
+        margin-bottom: $spacing3;
+      }
+    }
+
+    p {
+      color: $off-white;
+      max-width: 50ch;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background-color: $secondary-color;
+      color: $black;
+      
+      &:hover {
+        color: $black;
+        background-color: lighten($color: $secondary-color, $amount: 5%);
+      }
+    }
+  }
+
+  .offer-section {
+    margin: $spacing8 0;
+
+    @include forIpadPro() {
+      margin: $spacing6 0;
+    }
+
+    .content {
+      grid-column: 3/ span 8;
+
+      @include forIpadPro() {
+        grid-column: 2/ span 10;
+      }
+
+      @media (max-width: 900px) {
+        grid-column: 1/-1;
+      }
+    }
+
+    h2 {
+      margin-bottom: $spacing2;
+
+      @include forMobile() {
+        margin-bottom: $spacing2;
+      }
+    }
+
+    p {
+      margin-bottom: $spacing3;
+
+      @include forMobile() {
+        margin-bottom: $spacing2;
+      }
+    }
+
+    a {
+      width: max-content;
+    }
+  }
+}

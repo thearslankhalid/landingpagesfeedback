@@ -1,0 +1,54 @@
+$primary-color: #21209c;
+$secondary-color: #fdb827;
+
+$dark-bronze: #ABA195;
+$medium-bronze: #E1DDD0;
+$light-bronze: #F5F2ED;
+
+$red-border: #D50101;
+$red-text: #B90000;
+
+$white: #FFFFFF;
+$off-white: #F1F1F1;
+$black: #23120b;
+$off-black: #4C4C4C;
+
+.bg-primary {
+  background-color: $primary-color;
+}
+
+.bg-secondary {
+  background-color: $secondary-color;
+}
+
+.bg-off-black {
+  background-color: $off-black;
+}
+
+.bg-dark-bronze {
+  background-color: $dark-bronze;
+}
+
+.bg-medium-bronze {
+  background-color: $medium-bronze;
+}
+
+.bg-light-bronze {
+  background-color: $light-bronze;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.text-white {
+  color: $white;
+}
+
+.bg-black {
+  background-color:$black;
+}
+
+.bg-light {
+  background-color: rgba($color: #F5F2ED, $alpha: .7);
+}
