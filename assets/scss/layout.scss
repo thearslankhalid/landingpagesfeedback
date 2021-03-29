@@ -1,0 +1,53 @@
+@import 'fonts';
+@import 'globals';
+@import 'spacing';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $fontPrimary;
+  font-weight: 200;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+:focus {
+  outline: 0 none;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  @include forXLarge() {
+    margin: 0 20%;
+    column-gap: $spacing4;
+  }
+
+  @include forLarge() {
+    margin: 0 13%;
+    column-gap: $spacing3;
+  }
+
+  @include forLaptop() {
+    margin: 0 10%;
+    column-gap: $spacing3;
+  }
+
+  @include forIpadPro() {
+    margin: 0 5%;
+    column-gap: $spacing3;
+  }
+
+  @include forMobile() {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: $spacing2;
+    margin: 0 $spacing2;
+  }
+}

@@ -1,0 +1,156 @@
+.about-page {
+  .header {
+    background-color: $primary-color;
+    padding: $spacing12 0;
+    padding-bottom: 160px;
+
+    .grid-container {
+      align-items: center;
+    }
+    
+    .content {
+      grid-column: 6/ span 6;
+
+      @include forLaptop() {
+        grid-column: 5/ span 8;
+      }
+
+      @include forMobile() {
+        grid-column: 1/-1;
+      }
+
+      h1, .lead-text {
+        color: $off-white;
+      }
+
+      h1 {
+        margin-bottom: $spacing2;
+
+        @include forMobile() {
+          margin-bottom: $spacing1;
+        }
+      }
+    }
+
+    img {
+      grid-column: 2/ span 4;
+      border-radius: 50%;
+      width: 100%;
+
+      @include forLaptop() {
+        grid-column: 1/ span 4;
+      }
+
+      @include forMobile() {
+        grid-column: 2/ span 2;
+        margin-bottom: $spacing3;
+      }
+    }
+  }
+
+  #impact-section {
+    padding: $spacing12 0;
+
+    @include forIpadPro() {
+      padding: $spacing8 0;
+    }
+
+    h2 {
+      grid-column: 3/ span 8;
+      margin-bottom: $spacing6;
+
+      @include forLaptop() {
+        grid-column: 1/-1;
+      }
+
+      @include forIpadPro() {
+        grid-column: 1/-1;
+      }
+
+      @include forMobile() {
+        margin-bottom: $spacing4;
+      }
+    }
+
+    .cards-row {
+      grid-column: 1/-1;
+      display: flex;
+      gap: $spacing4;
+      justify-content: center;
+
+      @media (max-width: 850px) {
+        flex-flow: column;
+      }
+    }
+
+    .card {
+      flex-basis: 25%;
+      display: flex;
+      flex-direction: column;
+      padding: $spacing3;
+      border-radius: 6px;
+      border: 1px solid $light-bronze;
+      box-shadow: $box-shadow-lg;
+      background-color: $white;
+
+      @include forLaptop() {
+        flex-basis: 33.33%;
+      }
+
+      @media (max-width: 850px) {
+        flex-basis: 100%;
+      }
+
+      @include forMobile() {
+        gap: unset;
+
+        > * + * {
+          margin-top: $spacing2;
+        }
+      }
+
+      svg {
+        width: 40px;
+        height: 40px;
+        margin-bottom: $spacing2;
+
+        @include forMobile() {
+          margin-bottom: $spacing1;
+        }
+      }
+
+      h4 {
+        margin-bottom: $spacing1;
+
+        @include forMobile() {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  #contact-section {
+    padding-bottom: $spacing12;
+
+    @include forIpadPro() {
+      padding-bottom: $spacing8;
+    }
+
+    .lead-text {
+      grid-column: 3 / span 8;
+    }
+
+    @include forLaptop() {
+      grid-column: 2 / span 10;
+    }
+
+    @include forIpadPro() {
+      grid-column: 1/-1;
+    }
+  }
+
+  .question-cta {
+    margin-bottom: $spacing12;
+    background-color: $white; 
+  }
+}

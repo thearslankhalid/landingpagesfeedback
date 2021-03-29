@@ -1,0 +1,114 @@
+.nav-header {
+  background-color: $primary-color;
+}
+
+nav {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing2 0;
+
+  @include forMobile() {
+    flex-flow: column;
+    justify-content: center;
+  }
+
+  .logo-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include forMobile() {
+      width: 100%;
+    }
+  }
+
+  .menu-button {
+    display: none;
+
+    @include forMobile() {
+      display: block;
+
+      svg {
+        width: 25px;
+        height: 25px;
+        fill: $white;
+      }
+    }
+  }
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  gap: $spacing4;
+
+  @include forIpadPro() {
+    gap: unset;
+
+    > * + * {
+      margin-left: $spacing2;
+    }
+  }
+
+  @include forMobile() {
+    flex-flow: column;
+    
+    &.menu-list {
+      max-height: 0;
+      transition: max-height ease-in-out 0.4s;
+
+      &.open {
+        max-height: 600px;
+      }
+    }
+
+    > * + * {
+      margin-left: 0;
+      margin-top: $spacing3;
+    }
+  }
+
+  li {
+    overflow-x: hidden;
+
+    @include forMobile() {
+      text-align: center;
+      overflow: hidden;
+    }
+  }
+}
+
+.nav-link {
+  color: $light-bronze;
+  font-size: rem(16px);
+  line-height: rem(24px);
+  font-weight: 400;
+  position: relative;
+  transition: color 0.2s ease-in;
+
+  &:hover, &.nuxt-link-exact-active {
+    color: $secondary-color;
+    
+    &::before {
+      transform: translateX(0%);
+    }
+  }
+  
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: $secondary-color;
+    bottom: -2px;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform 0.2s ease-in;
+
+    @include forMobile() {
+      all: unset;
+    }
+  }
+}

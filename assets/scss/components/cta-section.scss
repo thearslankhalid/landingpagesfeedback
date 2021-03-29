@@ -1,0 +1,71 @@
+#secondary-cta-section {
+  background-color: $secondary-color;
+  padding: $spacing12 * 2 0;
+
+  @include forIpadPro() {
+    padding: $spacing8 * 2 0;
+  }
+
+  @include forMobile() {
+    padding: $spacing6 * 2 0;
+  }
+
+  header {
+    grid-column: 2/ span 6;
+
+    @include forLaptop() {
+      grid-column: 1/ span 7;
+    }
+
+    @media (max-width: 800px) {
+      grid-column: 3/ span 8;
+      margin-bottom: $spacing6;
+    }
+
+    @include forMobile() {
+      grid-column: 1/-1;
+    }
+
+    h2 {
+      margin-bottom: $spacing3;
+
+      @include forMobile() {
+        margin-bottom: $spacing2;
+      }
+    }
+
+    p {
+      max-width: 50ch;
+    }
+  }
+
+  .email-form-container {
+    grid-column: 8/ span 4;
+    align-self: center;
+
+    @include forLaptop() {
+      grid-column: 9/ span 4;
+    }
+
+    @media (max-width: 1200px) {
+      grid-column: 8/ span 5;
+    }
+
+    @media (max-width: 800px) {
+      grid-column: 3/ span 8;
+      grid-row: 2;
+      
+      .email-form {
+        max-width: unset;
+      }
+    }
+
+    @include forMobile() {
+      grid-column: 1/-1;
+    }
+
+    input {
+      background-color: $off-white;
+    }
+  }
+}

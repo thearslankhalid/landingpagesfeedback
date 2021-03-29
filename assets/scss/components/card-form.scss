@@ -1,0 +1,13 @@
+.card-form {
+  background-color: rgba($color: $off-white, $alpha: 0.5);
+  padding: $spacing4;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  gap: $spacing3;
+  box-shadow: $box-shadow-md;
+  
+  .email-form {
+    max-width: 100%;
+  }
+}

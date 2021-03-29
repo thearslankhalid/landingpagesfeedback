@@ -1,0 +1,324 @@
+.post-header-container {
+  position: relative;
+  height: fit-content;
+  padding: $spacing12 0;
+
+  @include forLaptop() {
+    padding: $spacing8 0;
+  }
+
+  @include forIpadPro() {
+    padding: $spacing6 0;
+  }
+
+  @include forMobile() {
+    padding: $spacing4 0;
+  }
+
+  &::before {
+    content: "";
+    width: 70%;
+    height: 100%;
+    background-color: $light-bronze;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+    @media (max-width: 1600px) {
+      width: 100%;
+      top: 0;
+      left: 0;
+      max-height: 70%;
+    }
+  }
+
+  &::after {
+    content: "";
+    width: 30%;
+    height: 100%;
+    background-color: $primary-color;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+
+    @media (max-width: 1600px) {
+      width: 100%;
+      top: 70%;
+      right: 0;
+      max-height: 30%;
+    }
+  }
+}
+
+.post-header {
+  height: fit-content;
+  grid-template-rows: auto;
+
+  @media (max-width: 1600px) {
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    gap: $spacing6;
+  }
+
+  @include forIpadPro() {
+    gap: $spacing4;
+  }
+
+  header {
+    grid-column: 1/ span 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+      margin-top: $spacing1;
+      font-size: rem(50px);
+      line-height: rem(56px);
+
+      @include forMobile() {
+        margin-bottom: $spacing4;
+        word-break: break-word;
+        font-size: rem(32px);
+        line-height: rem(36px);
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    grid-column: 6/ span 7;
+    margin: auto 0;
+
+    @include forMobile() {
+      grid-column: 1/-1;
+    }
+  }
+}
+
+.nuxt-content, .nuxt-content-container {
+  grid-column: 1/ span 8;
+  max-width: 80ch;
+  margin-top: $spacing12;
+  margin-bottom: $spacing12;
+
+  @include forIpadPro() {
+    grid-column: 1/ -1;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: $spacing8;
+    margin-bottom: $spacing2;
+
+    @include forMobile() {
+      margin-top: $spacing6;
+      margin-bottom: $spacing1;
+    }
+  }
+
+  p {
+    color: rgba($color: $black, $alpha: 0.8);
+    margin-bottom: $spacing2;
+
+    @include forMobile() {
+      margin-bottom: $spacing1;
+    }
+
+    &.lead-text {
+      color: $black;
+      margin-bottom: $spacing8;
+
+      @include forMobile() {
+        margin-bottom: $spacing6;
+      }
+    }
+
+    &:first-child {
+      color: $black;
+      font-size: rem(24px);
+      line-height: rem(44px);
+      font-weight: 300;
+      margin-bottom: $spacing8;
+
+      @include forMobile() {
+        font-size: rem(20px);
+        line-height: rem(36px);
+        margin-bottom: $spacing6;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ul {
+    padding-left: 0;
+    list-style-type: none;
+    margin-top: $spacing2;
+    margin-bottom: $spacing8;
+
+    @include forMobile() {
+      margin-bottom: $spacing6;
+    }
+
+    li {
+      font-size: rem(20px);
+      line-height: rem(32px);
+      margin-bottom: 0;
+      font-weight: 200;
+      color: #4A4A4A;
+      font-family: $fontPrimary;
+      padding: 15px 0;
+      padding-left: 50px;
+      border-bottom: 1px solid $medium-bronze;
+      position: relative;
+
+      &:first-child {
+        border-top: 1px solid $medium-bronze;
+      }
+
+      &::before {
+        font-family: 'Font Awesome 5 Pro';
+        font-weight: 900;
+        font-size: 0.75em;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+        content: "\f00c";
+        color: $primary-color;
+        position: absolute;
+        top: calc(50% - 0.375em);
+        left: 15px;
+      }
+    }
+  }
+
+  blockquote {
+    margin-top: 50px;
+    margin-left: $spacing12;
+    color: $primary-color;
+    font-size: rem(42px);
+    line-height: rem(63px);
+    font-family: $fontSecondary;
+    font-weight: 300;
+    position: relative;
+
+    @include forMobile() {
+      margin-top: $spacing4;
+      margin-left: $spacing3;
+      font-size: rem(28px);
+      line-height: rem(42px);
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: -$spacing8;
+      content: "“";
+      font-size: rem(100px);
+      line-height: rem(110px);
+      color: #DEDEDE;
+
+      @include forMobile() {
+        left: -$spacing3;
+        font-size: rem(60px);
+        line-height: rem(70px);
+      }
+    }
+  }
+
+  cite {
+    margin-left: $spacing12;
+    color: $black;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-family: $fontSecondary;
+    font-weight: 500;
+    font-size: rem(13px);
+    line-height: rem(48px);
+    font-style: normal;
+
+    @include forMobile() {
+      margin-left: $spacing3;
+    }
+
+    span {
+      font-weight: bold;
+    }
+  }
+  
+  cite + p {
+    margin-top: $spacing8;
+
+    @include forMobile() {
+      margin-top: $spacing6;
+    }
+  }
+
+  img {
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: $box-shadow-xs;
+
+    @include forIpadPro() {
+      // height: 500px;
+    }
+
+    @media (max-width: 500px) {
+      // height: 300px;
+    }
+  }
+
+  .img-container {
+    margin-top: $spacing4;
+
+    @include forMobile() {
+      margin-top: $spacing3;
+    }
+  }
+
+  figcaption {
+    color: rgba($color: $black, $alpha: 0.8);
+    font-size: rem(16px);
+    line-height: rem(20px);
+    font-family: $fontSecondary;
+    font-weight: 500;
+    font-style: italic;
+    margin-top: $spacing2;
+    margin-bottom: $spacing3;
+
+    @include forMobile() {
+      font-size: rem(14px);
+      line-height: rem(18px);
+      margin-top: $spacing1;
+      margin-bottom: $spacing2;
+    }
+  }
+}
+
+aside {
+  grid-column: 9 / span 4;
+  margin-top: $spacing8;
+
+  .card-form {
+    position: sticky;
+    top: $spacing4;
+    margin-bottom: $spacing12;
+  }
+
+  @include forIpadPro() {
+    grid-column: 1/-1;
+    grid-row: 2;
+  }
+}
