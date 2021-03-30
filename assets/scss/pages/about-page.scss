@@ -138,14 +138,14 @@
 
     .lead-text {
       grid-column: 3 / span 8;
-    }
+  
+      @include forIpadPro() {
+        grid-column: 1/-1;
+      }
 
-    @include forLaptop() {
-      grid-column: 2 / span 10;
-    }
-
-    @include forIpadPro() {
-      grid-column: 1/-1;
+      a {
+        word-break: break-word;
+      }
     }
   }
 

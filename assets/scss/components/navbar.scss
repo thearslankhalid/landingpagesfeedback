@@ -29,6 +29,7 @@ nav {
 
     @include forMobile() {
       display: block;
+      cursor: pointer;
 
       svg {
         width: 25px;
@@ -58,6 +59,7 @@ nav {
     &.menu-list {
       max-height: 0;
       transition: max-height ease-in-out 0.4s;
+      margin-top: $spacing3;
 
       &.open {
         max-height: 600px;
