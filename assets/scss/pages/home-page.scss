@@ -24,6 +24,8 @@
     @include forMobile() {
       padding-top: $spacing4;
       margin-bottom: $spacing6;
+      text-align: left;
+      margin-left: $spacing2;
     }
   }
 
@@ -54,6 +56,10 @@
         display: flex;
         flex-flow: column;
         align-items: center;
+
+        @include forMobile() {
+          align-items: flex-start;
+        }
       }
   
       h1 {
@@ -62,6 +68,7 @@
 
         @include forMobile() {
           margin-bottom: $spacing2;
+          text-align: left;
         }
       }
   
@@ -72,6 +79,7 @@
 
         @include forMobile() {
           margin-bottom: $spacing3;
+          text-align: left;
         }
       }
 
