@@ -48,7 +48,6 @@
 <script>
 import { required, email, url } from 'vuelidate/lib/validators'
 import { addContact } from '~/api'
-import firebase from '~/plugins/firebase'
 const data = () => {
   return {
     email: '',
@@ -132,36 +131,18 @@ export default {
 
       addContact(this.form.email, this.form.website).then((response) => {
         if (response.data.success) {
-          firebase.auth().signInAnonymously()
-          firebase.auth().onAuthStateChanged((user) => {
-            if (user) {
-              const uid = user.uid
-              firebase
-                .database()
-                .ref('users/' + uid)
-                .set(
-                  {
-                    email: this.form.email,
-                    website: this.form.website,
-                  },
-                  (error) => {
-                    if (error) {
-                      this.submitButtonText = 'Try Again :('
-                    } else {
-                      this.submitButtonText = 'You Joined the list :)'
-                      setTimeout(() => {
-                        this.reset()
-                      }, 1000)
-                    }
-                  }
-                )
-            }
-          })
+          this.submitButtonText = "You're in :)"
+          setTimeout(() => {
+            this.reset()
+          }, 500)
+        } else {
+          this.submitButtonText = 'Try Again :('
         }
       })
     },
 
     reset() {
+      this.$router.push('/thankyou')
       this.resetData()
       this.resetInputs()
       this.resetValidations()
