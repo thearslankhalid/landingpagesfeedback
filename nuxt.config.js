@@ -11,6 +11,13 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
     ],
+    script: [
+      {
+        src: '//script.crazyegg.com/pages/scripts/0105/2086.js',
+        async: 'async',
+        type: 'text/javascript',
+      },
+    ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     link: [
       {
