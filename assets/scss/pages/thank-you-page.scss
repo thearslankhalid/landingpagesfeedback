@@ -94,6 +94,10 @@
     .content {
       grid-column: 3/ span 8;
 
+      &:first-child {
+        margin-bottom: $spacing6;
+      }
+
       @include forIpadPro() {
         grid-column: 2/ span 10;
       }
@@ -103,7 +107,7 @@
       }
     }
 
-    h2 {
+    h3 {
       margin-bottom: $spacing2;
 
       @include forMobile() {

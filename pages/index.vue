@@ -5,10 +5,14 @@
       <div class="grid-container">
         <header>
           <div class="header-container">
-            <h1>Want to get your landing page reviewed?</h1>
+            <h1>
+              Do you want your landing page to
+              <span class="text-yellow">convert more</span>?
+            </h1>
             <div class="lead-text">
-              I give honest, unbiased and personalized landing page feedback to
-              help you convert more visitors into leads.
+              Creating a landing page that converts well is tricky. I help SaaS
+              founders and Indie Hackers figure out what works and what does not
+              so that they can grow their business faster.
             </div>
             <a class="btn btn-primary" href="#secondary-cta-section"
               >Get a free review</a

@@ -9,13 +9,13 @@
               <nuxt-link class="nav-link" to="/">Home</nuxt-link>
             </li>
             <li>
+              <nuxt-link class="nav-link" to="/sass-case-studies">
+                Case Studies
+              </nuxt-link>
+            </li>
+            <li>
               <nuxt-link class="nav-link" to="/about">About</nuxt-link>
             </li>
-            <!-- <li>
-              <nuxt-link class="nav-link" to="/teardowns">
-                Landing Page Reviews
-              </nuxt-link>
-            </li> -->
           </ul>
         </div>
         <div class="row">
