@@ -99,10 +99,10 @@
 }
 
 .nuxt-content, .nuxt-content-container {
-  grid-column: 1/ span 8;
+  grid-column: 3/ span 8;
   max-width: 80ch;
   margin-top: $spacing12;
-  margin-bottom: $spacing12;
+  margin-bottom: $spacing8;
 
   @include forIpadPro() {
     grid-column: 1/ -1;
@@ -139,27 +139,43 @@
       }
     }
 
-    &:first-child {
-      color: $black;
-      font-size: rem(24px);
-      line-height: rem(44px);
-      font-weight: 300;
-      margin-bottom: $spacing8;
-
-      @include forMobile() {
-        font-size: rem(20px);
-        line-height: rem(36px);
-        margin-bottom: $spacing6;
-      }
-    }
-
     &:last-child {
       margin-bottom: 0;
     }
   }
 
+  a {
+    text-decoration: underline;
+  }
+
+  ol {
+    padding-left: 30px;
+    margin-top: $spacing2;
+    margin-bottom: $spacing8;
+
+    @include forMobile() {
+      margin-bottom: $spacing6;
+    }
+
+    li {
+      font-size: rem(20px);
+      line-height: rem(32px);
+      margin-bottom: 0;
+      color: rgba($color: $black, $alpha: 0.8);
+      font-family: $fontPrimary;
+      padding: 15px 0;
+      padding-left: 20px;
+      border-bottom: 1px solid $medium-bronze;
+      position: relative;
+
+      &:first-child {
+        border-top: 1px solid $medium-bronze;
+      }
+    }
+  }
+
   ul {
-    padding-left: 0;
+    padding-left: 30px;
     list-style-type: none;
     margin-top: $spacing2;
     margin-bottom: $spacing8;
@@ -172,8 +188,7 @@
       font-size: rem(20px);
       line-height: rem(32px);
       margin-bottom: 0;
-      font-weight: 200;
-      color: #4A4A4A;
+      color: rgba($color: $black, $alpha: 0.8);
       font-family: $fontPrimary;
       padding: 15px 0;
       padding-left: 50px;
@@ -280,7 +295,7 @@
     }
   }
 
-  .img-container {
+  figure {
     margin-top: $spacing4;
 
     @include forMobile() {
@@ -290,19 +305,17 @@
 
   figcaption {
     color: rgba($color: $black, $alpha: 0.8);
-    font-size: rem(16px);
-    line-height: rem(20px);
+    font-size: rem(14px);
+    line-height: rem(18px);
     font-family: $fontSecondary;
     font-weight: 500;
     font-style: italic;
-    margin-top: $spacing2;
-    margin-bottom: $spacing3;
+    margin-top: $spacing1;
+    margin-bottom: $spacing6;
 
     @include forMobile() {
-      font-size: rem(14px);
-      line-height: rem(18px);
       margin-top: $spacing1;
-      margin-bottom: $spacing2;
+      margin-bottom: $spacing3;
     }
   }
 }

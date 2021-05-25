@@ -52,3 +52,11 @@ $off-black: #4C4C4C;
 .bg-light {
   background-color: rgba($color: #F5F2ED, $alpha: .7);
 }
+
+.text-yellow {
+  color: $secondary-color;
+}
+
+.text-blue {
+  color: $primary-color;
+}

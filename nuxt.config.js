@@ -5,17 +5,15 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'landing-pages-feedback',
+    title: 'Landing Page Feedback',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-    ],
-    script: [
       {
-        src: '//script.crazyegg.com/pages/scripts/0105/2086.js',
-        async: 'async',
-        type: 'text/javascript',
+        hid: 'description',
+        name: 'description',
+        content:
+          'Are you a SaaS founder or an Indie Hacker looking to improve your landing page? Get personalized feedback for your product landing page and covert more visitors into customers.',
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -36,7 +34,7 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: ['~/assets/scss/main.scss'],
+  css: ['~/assets/scss/main.scss', '~/assets/scss/vendors/css/fontawesome.css'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [{ src: '~/plugins/vuelidate.js' }],
@@ -60,9 +58,9 @@ export default {
   router: {
     extendRoutes(routes, resolve) {
       routes.push({
-        name: 'me',
-        path: '/who-am-i',
-        component: resolve(__dirname, 'pages/About.vue'),
+        name: 'sass-case-studies',
+        path: '/sass-case-studies',
+        component: resolve(__dirname, 'pages/Teardowns.vue'),
       })
     },
   },
