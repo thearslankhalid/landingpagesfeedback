@@ -22,7 +22,7 @@
           <small>&copy; Copyright LandingPagesFeedback, 2021</small>
           <div class="social-list">
             <small>Connect with me on Twitter</small>
-            <a href="https://www.twitter.com/thearslankhalid"
+            <a target="_blank" href="https://www.twitter.com/thearslankhalid"
               ><BrandIcons icon-name="twitter"
             /></a>
             <!-- <a href="https://www.linkedin.com/thearslankhalid"

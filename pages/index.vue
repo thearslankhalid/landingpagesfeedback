@@ -24,10 +24,10 @@
     <section id="primary-section">
       <div class="grid-container">
         <header>
-          <h2 class="section-heading">What does the feedback contain?</h2>
+          <h2 class="section-heading">What does the review contain?</h2>
           <p>
-            The feedback contains a mix of conversion and optimization
-            suggestions to impove your landing page.
+            The review contains a mix of conversion and optimization suggestions
+            to impove your landing page.
           </p>
         </header>
         <div class="cards-container">
@@ -62,7 +62,7 @@
     <section id="social-proof-section">
       <div class="grid-container">
         <h2 class="section-heading">
-          You don't have to take my word for the feedback!
+          What other SaaS founders and Indie Hackers are saying:
         </h2>
       </div>
       <div class="grid-container">
