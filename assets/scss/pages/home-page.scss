@@ -12,23 +12,6 @@
     }
   }
 
-  .logo-text {
-    padding-top: $spacing6;
-    margin-bottom: $spacing12;
-    text-align: center;
-
-    @include forIpadPro() {
-      margin-bottom: $spacing8; 
-    }
-
-    @include forMobile() {
-      padding-top: $spacing4;
-      margin-bottom: $spacing6;
-      text-align: left;
-      margin-left: $spacing2;
-    }
-  }
-
   .section-heading {
     grid-column: 3/ span 8;
     max-width: 80ch;
@@ -44,7 +27,6 @@
 
   #hero-section {
     background-color: $primary-color;
-    padding-top: 0;
 
     header {
       grid-column: 1/-1;

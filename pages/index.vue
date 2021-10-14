@@ -1,22 +1,25 @@
 <template>
   <div class="home-page">
+    <Header />
     <section id="hero-section">
-      <Logo />
       <div class="grid-container">
         <header>
           <div class="header-container">
             <h1>
-              Do you want your landing page to
+              Do you want your SaaS landing page to
               <span class="text-yellow">convert more</span>?
             </h1>
-            <div class="lead-text">
-              Creating a landing page that converts well is tricky. I help SaaS
-              founders and Indie Hackers figure out what works and what does not
-              so that they can grow their business faster.
-            </div>
-            <a class="btn btn-primary" href="#secondary-cta-section"
-              >Get a free review</a
-            >
+            <p class="lead-text">
+              I help SaaS founders and Indie Hackers
+              <span class="text-yellow">
+                improve their landing page experience
+              </span>
+              all the way from the first impression to the landing page
+              conversion.
+            </p>
+            <a class="btn btn-primary" href="#secondary-cta-section">
+              Get free feedback
+            </a>
           </div>
         </header>
       </div>

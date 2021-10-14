@@ -1,11 +1,9 @@
 <template>
   <article class="post-page">
+    <Header />
     <div class="post-header-container">
       <div class="grid-container post-header">
         <header>
-          <nuxt-link to="/sass-case-studies">
-            <span class="subtitle-1">View all case studies</span>
-          </nuxt-link>
           <h1>{{ article.title }}</h1>
         </header>
         <img :src="imgSrc()" />

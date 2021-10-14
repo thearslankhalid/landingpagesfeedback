@@ -3,7 +3,7 @@
     <div class="grid-container">
       <nav>
         <div class="logo-row">
-          <Logo />
+          <nuxt-link to="/"><Logo /></nuxt-link>
           <button class="menu-button" @click.prevent="toggleMenu">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
               <path
@@ -14,15 +14,9 @@
         </div>
         <ul class="nav-list menu-list" :class="{ open: isMenuShown }">
           <li>
-            <nuxt-link class="nav-link" to="/">Home</nuxt-link>
-          </li>
-          <li>
             <nuxt-link class="nav-link" to="/sass-case-studies">
               Case Studies
             </nuxt-link>
-          </li>
-          <li>
-            <nuxt-link class="nav-link" to="/about">About</nuxt-link>
           </li>
         </ul>
       </nav>

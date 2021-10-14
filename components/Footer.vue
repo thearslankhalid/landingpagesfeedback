@@ -3,11 +3,10 @@
     <div class="grid-container">
       <footer>
         <div class="row">
-          <Logo class="text-white" />
+          <nuxt-link to="/">
+            <Logo class="text-white" />
+          </nuxt-link>
           <ul class="nav-list">
-            <li>
-              <nuxt-link class="nav-link" to="/">Home</nuxt-link>
-            </li>
             <li>
               <nuxt-link class="nav-link" to="/sass-case-studies">
                 Case Studies
