@@ -10,7 +10,7 @@
         <input
           ref="emailInput"
           required
-          placeholder="name@domain.com"
+          placeholder="Your email"
           name="email"
           type="email"
           @blur="setEmail"
@@ -25,7 +25,7 @@
           ref="websiteInput"
           required
           type="url"
-          placeholder="https://www.mysite.com"
+          placeholder="Your landing page url"
           @blur="setWebsite"
         />
         <FeedbackIcons v-if="websiteSuccess" icon-name="check-circle" />
